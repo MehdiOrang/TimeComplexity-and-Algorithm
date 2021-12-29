@@ -1,5 +1,5 @@
 package main
-
+// https://app.codility.com/demo/results/trainingRSDAKX-JX3/
 import "fmt"
 
 func Solution(N int) int {
