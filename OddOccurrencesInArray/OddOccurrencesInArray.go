@@ -14,3 +14,5 @@ func Solution(A []int) int {
 func main(){
 	fmt.Println(Solution([]int{1,2,4,2,1}) )
 }
+
+//https://app.codility.com/demo/results/trainingMWFKYD-X7H/
