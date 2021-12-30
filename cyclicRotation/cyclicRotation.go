@@ -28,3 +28,5 @@ func Solution(A []int, K int) []int {
 func main(){
 	fmt.Println(Solution([]int{2,3,4,5,6}, 3))
 }
+
+// https://app.codility.com/demo/results/trainingW3TXVC-VHP/
