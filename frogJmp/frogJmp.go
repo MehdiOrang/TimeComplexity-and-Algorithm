@@ -74,7 +74,7 @@ func Solution(X int, Y int, D int) int {
 
 
 func main(){
-
 	fmt.Println(Solution(5, 100000000000, 99))
-	
 }
+
+//https://app.codility.com/demo/results/training4U3Q8N-YGV/
