@@ -8,6 +8,7 @@ import (
 // Big O(N * log(N))
 func Solution(A []int) int {
     start := time.Now()
+    
     len  := len(A)
     head := A[0]
     tail := 0
@@ -16,10 +17,7 @@ func Solution(A []int) int {
     }
  
     min_diff := abs(head - tail)
-    if len == 2{
-        return min_diff
-    }
-    for i := 1; i < len; i++{
+    for i := 1; i < len-1; i++{
         head += A[i]
         tail -= A[i]
         if abs(head-tail) < min_diff{
@@ -48,7 +46,7 @@ func main(){
   fmt.Println(Solution([]int{1,2,5,3}))
 }
 
-// https://app.codility.com/demo/results/trainingHDQXY6-BJB/
+// https://app.codility.com/demo/results/trainingZQDP34-M2M/
 
 
 
