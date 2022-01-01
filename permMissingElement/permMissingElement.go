@@ -27,7 +27,6 @@ func Solution(A []int) int {
 
     t := time.Now()
     elapsed := t.Sub(start)
-
     fmt.Println(elapsed)
 
     return missedNumber
