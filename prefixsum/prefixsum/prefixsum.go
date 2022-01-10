@@ -8,3 +8,5 @@ func PrefixSums(A []int) []int {
 	}
 	return prefixSlice
 }
+
+
