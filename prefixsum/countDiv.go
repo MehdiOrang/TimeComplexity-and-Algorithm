@@ -22,3 +22,5 @@ func countDiv(A int, B int, K int) int {
 	result = (B / K) - (A / K) + result
 	return result
 }
+
+//https://app.codility.com/demo/results/trainingNAD4SA-UNV/
