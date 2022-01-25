@@ -2,6 +2,7 @@ package main
 
 import (
     "fmt"
+    "import testing"
 )
 
 func getDeepestLetter(s string) rune {
