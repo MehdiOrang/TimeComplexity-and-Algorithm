@@ -42,19 +42,20 @@ type letterTestCase struct {
 
 func TestGetDeepestLetter(t *testing.T) {
 	testCases := []letterTestCase{
-		{input: "a(b)c", expected: 'b'},
-		{input: "((a))(((M)))(c)(D)(e)(((f))(((G))))h(i)", expected: 'G'}, //changed
-		{input: "((A)(b)c", expected: '?'},                                //changed
-		{input: "(a)((G)c)", expected: 'G'},                               // changed
-		{input: "(8)", expected: '8'},                                     //changed
-		{input: "(!)", expected: '!'},                                     //changed
+		{input: "a(b)c", expected: 'c'},                                   //let it fails purposely
+		{input: "((a))(((M)))(c)(D)(e)(((f))(((G))))h(i)", expected: 'G'}, //alright
+		{input: "((A)(b)c", expected: '?'},                                //alright
+		{input: "(a)((G)c)", expected: 'G'},                               //alright
+		{input: "(8)", expected: '8'},                                     //alright
+		{input: "(!)", expected: '!'},                                     //alright
 	}
 
 	for _, test := range testCases {
 		t.Run(test.input, func(t *testing.T) {
 			actual := getDeepestLetter(test.input)
 			if !cmp.Equal(test.expected, actual) {
-				t.Log(cmp.Diff(test.expected, actual))
+				t.Log(cmp.Diff(string(test.expected), string(actual)))       //first way
+				t.Logf("Expected '%c', but got '%c'", test.expected, actual) //second way
 				t.Fail()
 			}
 		})
